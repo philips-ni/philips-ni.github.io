@@ -7,15 +7,18 @@
   
   <title>Hexo ,org mode and github pages | Fei&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="hexo,org-mode">
+  <meta name="description" content="Table of Contents   My environment Installation Init blog directory Create a new post Deploy  Update &amp;quot;&amp;lt;blog_dir&amp;gt;/_config.yml&amp;quot; Deploy to github pages">
+<meta name="keywords" content="hexo,org-mode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo ,org mode and github pages">
 <meta property="og:url" content="https://philips-ni.github.io/2018/11/24/hexo-org-gitpages/index.html">
 <meta property="og:site_name" content="Fei&#39;s Blog">
+<meta property="og:description" content="Table of Contents   My environment Installation Init blog directory Create a new post Deploy  Update &amp;quot;&amp;lt;blog_dir&amp;gt;/_config.yml&amp;quot; Deploy to github pages">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-25T05:54:56.920Z">
+<meta property="og:updated_time" content="2018-11-25T06:00:15.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo ,org mode and github pages">
+<meta name="twitter:description" content="Table of Contents   My environment Installation Init blog directory Create a new post Deploy  Update &amp;quot;&amp;lt;blog_dir&amp;gt;/_config.yml&amp;quot; Deploy to github pages">
   
     <link rel="alternate" href="/atom.xml" title="Fei&#39;s Blog" type="application/atom+xml">
   
@@ -89,11 +92,28 @@
     <div class="article-entry" itemprop="articleBody">
       
         <div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org68175fe">My environment</a></li>
+<li><a href="#org31b3d00">Installation</a></li>
+<li><a href="#org32def86">Init blog directory</a></li>
+<li><a href="#org1bc1e8d">Create a new post</a></li>
+<li><a href="#orgd78f41f">Deploy</a>
+<ul>
+<li><a href="#org3023d05">Update &quot;&lt;blog_dir&gt;/_config.yml&quot;</a></li>
+<li><a href="#org3be5780">Deploy to github pages</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <a id="more"></a>
 
-<div id="outline-container-orgac641a1" class="outline-2">
-<h2 id="orgac641a1">My environment</h2>
-<div class="outline-text-2" id="text-orgac641a1">
+<div id="outline-container-org68175fe" class="outline-2">
+<h2 id="org68175fe">My environment</h2>
+<div class="outline-text-2" id="text-org68175fe">
 <ul class="org-ul">
 <li>macOS high Seirra(10.13.6)</li>
 <li>Emacs 26.1</li>
@@ -101,23 +121,34 @@
 </div>
 </div>
 
-<div id="outline-container-orgf16524b" class="outline-2">
-<h2 id="orgf16524b">Installation</h2>
-<div class="outline-text-2" id="text-orgf16524b">
+<div id="outline-container-org31b3d00" class="outline-2">
+<h2 id="org31b3d00">Installation</h2>
+<div class="outline-text-2" id="text-org31b3d00">
 <ul class="org-ul">
-<li><a href="https://brew.sh/" target="_blank" rel="noopener">brew</a></li>
-<li>git (brew install git)</li>
-<li>npm (brew install npm)</li>
-<li><a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></li>
+<li><a href="https://brew.sh/" target="_blank" rel="noopener">brew</a>
+<ul class="org-ul">
+<li>/usr/bin/ruby -e &quot;$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" target="_blank" rel="noopener">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)&quot;</li>
+</ul></li>
+<li>git 
+<ul class="org-ul">
+<li>brew install git</li>
+</ul></li>
+<li>npm 
+<ul class="org-ul">
+<li>brew install npm</li>
+</ul></li>
+<li><a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a> 
+<ul class="org-ul">
+<li>npm install hexo-cli -g</li>
+</ul></li>
 <li><a href="https://github.com/kuanyui/hexo.el" target="_blank" rel="noopener">hexo.el</a></li>
-<li><a href="https://github.com/coldnew/hexo-renderer-org" target="_blank" rel="noopener">hexo-renderer-org</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgee19db4" class="outline-2">
-<h2 id="orgee19db4">Init blog directory</h2>
-<div class="outline-text-2" id="text-orgee19db4">
+<div id="outline-container-org32def86" class="outline-2">
+<h2 id="org32def86">Init blog directory</h2>
+<div class="outline-text-2" id="text-org32def86">
 <p>
 In ~/.emacs add following:
 </p>
@@ -130,27 +161,32 @@ In ~/.emacs add following:
 Run:
 </p>
 <div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line"><span class="comment"># only need run this once</span></span><br><span class="line">npm install https://github.com/coldnew/hexo-renderer-org<span class="comment">#master --save</span></span><br></pre></td></tr></table></figure>
 </div>
+
+<p>
+hexo server
+#+END_SRC
+</p>
 </div>
 </div>
 
-<div id="outline-container-orgba32009" class="outline-2">
-<h2 id="orgba32009">Create a new post</h2>
-<div class="outline-text-2" id="text-orgba32009">
+<div id="outline-container-org1bc1e8d" class="outline-2">
+<h2 id="org1bc1e8d">Create a new post</h2>
+<div class="outline-text-2" id="text-org1bc1e8d">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">M-x hexo-new</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org3889f73" class="outline-2">
-<h2 id="org3889f73">Deploy</h2>
-<div class="outline-text-2" id="text-org3889f73">
+<div id="outline-container-orgd78f41f" class="outline-2">
+<h2 id="orgd78f41f">Deploy</h2>
+<div class="outline-text-2" id="text-orgd78f41f">
 </div>
-<div id="outline-container-orge4446df" class="outline-3">
-<h3 id="orge4446df">Update &quot;&lt;blog_dir&gt;/_config.yml&quot;</h3>
-<div class="outline-text-3" id="text-orge4446df">
+<div id="outline-container-org3023d05" class="outline-3">
+<h3 id="org3023d05">Update &quot;&lt;blog_dir&gt;/_config.yml&quot;</h3>
+<div class="outline-text-3" id="text-org3023d05">
 <div class="org-src-container">
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"># Site
 title: Fei&apos;s Blog
@@ -180,9 +216,9 @@ deploy:
 </div>
 </div>
 
-<div id="outline-container-org6365e10" class="outline-3">
-<h3 id="org6365e10">Deploy to github pages</h3>
-<div class="outline-text-3" id="text-org6365e10">
+<div id="outline-container-org3be5780" class="outline-3">
+<h3 id="org3be5780">Deploy to github pages</h3>
+<div class="outline-text-3" id="text-org3be5780">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 </div>
@@ -194,7 +230,7 @@ deploy:
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://philips-ni.github.io/2018/11/24/hexo-org-gitpages/" data-id="cjowgyozi0001rwe81bmeqijs" class="article-share-link">Share</a>
+      <a data-url="https://philips-ni.github.io/2018/11/24/hexo-org-gitpages/" data-id="cjowh5i9s0001ure8xlbrv5lj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/org-mode/">org-mode</a></li></ul>
