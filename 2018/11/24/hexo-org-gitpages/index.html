@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Fei&#39;s Blog">
 <meta property="og:description" content="Table of Contents   My environment Installation Initialize blog directory Create a new post Deploy  create a git repository Update &amp;quot;&amp;lt;blog_dir&amp;gt;/_config.yml&amp;quot; Deploy to local HTTP serve">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-25T06:51:08.069Z">
+<meta property="og:updated_time" content="2018-11-25T17:10:40.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo ,org mode and github pages">
 <meta name="twitter:description" content="Table of Contents   My environment Installation Initialize blog directory Create a new post Deploy  create a git repository Update &amp;quot;&amp;lt;blog_dir&amp;gt;/_config.yml&amp;quot; Deploy to local HTTP serve">
@@ -98,25 +98,25 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org256285f">My environment</a></li>
-<li><a href="#org7ae575e">Installation</a></li>
-<li><a href="#org8a38f1b">Initialize blog directory</a></li>
-<li><a href="#orgaa395b2">Create a new post</a></li>
-<li><a href="#org961fed8">Deploy</a>
+<li><a href="#org7c53aae">My environment</a></li>
+<li><a href="#orge93ec57">Installation</a></li>
+<li><a href="#org1a9289e">Initialize blog directory</a></li>
+<li><a href="#org39ed71d">Create a new post</a></li>
+<li><a href="#orgd9c6560">Deploy</a>
 <ul>
-<li><a href="#orgea5478b">create a git repository</a></li>
-<li><a href="#org247327e">Update &quot;&lt;blog_dir&gt;/_config.yml&quot;</a></li>
-<li><a href="#org1da7d93">Deploy to local HTTP server</a></li>
-<li><a href="#orgd0636b8">Deploy to github pages</a></li>
+<li><a href="#orgb8ae85a">create a git repository</a></li>
+<li><a href="#org15e4509">Update &quot;&lt;blog_dir&gt;/_config.yml&quot;</a></li>
+<li><a href="#orgca7b7a2">Deploy to local HTTP server</a></li>
+<li><a href="#org67e9e67">Deploy to github pages</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <a id="more"></a>
-<div id="outline-container-org256285f" class="outline-2">
-<h2 id="org256285f">My environment</h2>
-<div class="outline-text-2" id="text-org256285f">
+<div id="outline-container-org7c53aae" class="outline-2">
+<h2 id="org7c53aae">My environment</h2>
+<div class="outline-text-2" id="text-org7c53aae">
 <ul class="org-ul">
 <li>macOS high Seirra(10.13.6)</li>
 <li>Emacs 26.1</li>
@@ -124,9 +124,9 @@
 </div>
 </div>
 
-<div id="outline-container-org7ae575e" class="outline-2">
-<h2 id="org7ae575e">Installation</h2>
-<div class="outline-text-2" id="text-org7ae575e">
+<div id="outline-container-orge93ec57" class="outline-2">
+<h2 id="orge93ec57">Installation</h2>
+<div class="outline-text-2" id="text-orge93ec57">
 <ul class="org-ul">
 <li><a href="https://brew.sh/" target="_blank" rel="noopener">brew</a>
 <ul class="org-ul">
@@ -154,9 +154,9 @@
 </div>
 
 
-<div id="outline-container-org8a38f1b" class="outline-2">
-<h2 id="org8a38f1b">Initialize blog directory</h2>
-<div class="outline-text-2" id="text-org8a38f1b">
+<div id="outline-container-org1a9289e" class="outline-2">
+<h2 id="org1a9289e">Initialize blog directory</h2>
+<div class="outline-text-2" id="text-org1a9289e">
 <p>
 In ~/.emacs add following:
 </p>
@@ -170,27 +170,27 @@ Run:
 </p>
 
 <div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line"><span class="comment"># only need run this once</span></span><br><span class="line">npm install https://github.com/coldnew/hexo-renderer-org<span class="comment">#master --save</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog</span><br><span class="line"><span class="built_in">cd</span> myblog</span><br><span class="line">npm install</span><br><span class="line"><span class="comment"># only need run this once</span></span><br><span class="line">npm install https://github.com/coldnew/hexo-renderer-org<span class="comment">#master --save</span></span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgaa395b2" class="outline-2">
-<h2 id="orgaa395b2">Create a new post</h2>
-<div class="outline-text-2" id="text-orgaa395b2">
+<div id="outline-container-org39ed71d" class="outline-2">
+<h2 id="org39ed71d">Create a new post</h2>
+<div class="outline-text-2" id="text-org39ed71d">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">M-x hexo-new</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org961fed8" class="outline-2">
-<h2 id="org961fed8">Deploy</h2>
-<div class="outline-text-2" id="text-org961fed8">
+<div id="outline-container-orgd9c6560" class="outline-2">
+<h2 id="orgd9c6560">Deploy</h2>
+<div class="outline-text-2" id="text-orgd9c6560">
 </div>
-<div id="outline-container-orgea5478b" class="outline-3">
-<h3 id="orgea5478b">create a git repository</h3>
-<div class="outline-text-3" id="text-orgea5478b">
+<div id="outline-container-orgb8ae85a" class="outline-3">
+<h3 id="orgb8ae85a">create a git repository</h3>
+<div class="outline-text-3" id="text-orgb8ae85a">
 <ul class="org-ul">
 <li>&lt;username&gt;.github.io</li>
 </ul>
@@ -201,9 +201,9 @@ This repository name is also your blog url.
 </div>
 </div>
 
-<div id="outline-container-org247327e" class="outline-3">
-<h3 id="org247327e">Update &quot;&lt;blog_dir&gt;/_config.yml&quot;</h3>
-<div class="outline-text-3" id="text-org247327e">
+<div id="outline-container-org15e4509" class="outline-3">
+<h3 id="org15e4509">Update &quot;&lt;blog_dir&gt;/_config.yml&quot;</h3>
+<div class="outline-text-3" id="text-org15e4509">
 <div class="org-src-container">
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"># Site
 title: Fei&apos;s Blog
@@ -234,9 +234,9 @@ deploy:
 </div>
 
 
-<div id="outline-container-org1da7d93" class="outline-3">
-<h3 id="org1da7d93">Deploy to local HTTP server</h3>
-<div class="outline-text-3" id="text-org1da7d93">
+<div id="outline-container-orgca7b7a2" class="outline-3">
+<h3 id="orgca7b7a2">Deploy to local HTTP server</h3>
+<div class="outline-text-3" id="text-orgca7b7a2">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># blog server is running in http://localhost:4000</span></span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 </div>
@@ -244,9 +244,9 @@ deploy:
 </div>
 
 
-<div id="outline-container-orgd0636b8" class="outline-3">
-<h3 id="orgd0636b8">Deploy to github pages</h3>
-<div class="outline-text-3" id="text-orgd0636b8">
+<div id="outline-container-org67e9e67" class="outline-3">
+<h3 id="org67e9e67">Deploy to github pages</h3>
+<div class="outline-text-3" id="text-org67e9e67">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># all generated static files will be deoployed to your github pages space</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 </div>
@@ -258,7 +258,7 @@ deploy:
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://philips-ni.github.io/2018/11/24/hexo-org-gitpages/" data-id="cjownf3cf00015ge8l50vm1or" class="article-share-link">Share</a>
+      <a data-url="https://philips-ni.github.io/2018/11/24/hexo-org-gitpages/" data-id="cjox54ntb0001cue8i84k92py" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/org-mode/">org-mode</a></li></ul>
