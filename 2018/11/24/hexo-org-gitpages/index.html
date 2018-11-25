@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Fei&#39;s Blog">
 <meta property="og:description" content="Table of Contents   My environment Installation Init blog directory Create a new post Deploy  Update &amp;quot;&amp;lt;blog_dir&amp;gt;/_config.yml&amp;quot; Deploy to github pages         My environment   macOS hi">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-25T06:07:48.363Z">
+<meta property="og:updated_time" content="2018-11-25T06:17:01.639Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo ,org mode and github pages">
 <meta name="twitter:description" content="Table of Contents   My environment Installation Init blog directory Create a new post Deploy  Update &amp;quot;&amp;lt;blog_dir&amp;gt;/_config.yml&amp;quot; Deploy to github pages         My environment   macOS hi">
@@ -96,14 +96,14 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgdeb147b">My environment</a></li>
-<li><a href="#org98dfb67">Installation</a></li>
-<li><a href="#org6b788f0">Init blog directory</a></li>
-<li><a href="#org00fb2d7">Create a new post</a></li>
-<li><a href="#org6f72164">Deploy</a>
+<li><a href="#org9276536">My environment</a></li>
+<li><a href="#orgab4d089">Installation</a></li>
+<li><a href="#org7e61966">Init blog directory</a></li>
+<li><a href="#org79f8037">Create a new post</a></li>
+<li><a href="#orgef5769b">Deploy</a>
 <ul>
-<li><a href="#org0a0e591">Update &quot;&lt;blog_dir&gt;/_config.yml&quot;</a></li>
-<li><a href="#orgb74161f">Deploy to github pages</a></li>
+<li><a href="#org10b6b70">Update &quot;&lt;blog_dir&gt;/_config.yml&quot;</a></li>
+<li><a href="#org56a2a73">Deploy to github pages</a></li>
 </ul>
 </li>
 </ul>
@@ -111,9 +111,9 @@
 </div>
 
 
-<div id="outline-container-orgdeb147b" class="outline-2">
-<h2 id="orgdeb147b">My environment</h2>
-<div class="outline-text-2" id="text-orgdeb147b">
+<div id="outline-container-org9276536" class="outline-2">
+<h2 id="org9276536">My environment</h2>
+<div class="outline-text-2" id="text-org9276536">
 <ul class="org-ul">
 <li>macOS high Seirra(10.13.6)</li>
 <li>Emacs 26.1</li>
@@ -121,9 +121,9 @@
 </div>
 </div>
 
-<div id="outline-container-org98dfb67" class="outline-2">
-<h2 id="org98dfb67">Installation</h2>
-<div class="outline-text-2" id="text-org98dfb67">
+<div id="outline-container-orgab4d089" class="outline-2">
+<h2 id="orgab4d089">Installation</h2>
+<div class="outline-text-2" id="text-orgab4d089">
 <ul class="org-ul">
 <li><a href="https://brew.sh/" target="_blank" rel="noopener">brew</a>
 <ul class="org-ul">
@@ -151,22 +151,23 @@
 <a id="more"></a>
 </div>
 </div>
-<div id="outline-container-org6b788f0" class="outline-2">
-<h2 id="org6b788f0">Init blog directory</h2>
-<div class="outline-text-2" id="text-org6b788f0">
+<div id="outline-container-org7e61966" class="outline-2">
+<h2 id="org7e61966">Init blog directory</h2>
+<div class="outline-text-2" id="text-org7e61966">
 <p>
 In ~/.emacs add following:
 </p>
 <div class="org-src-container">
-<figure class="highlight lisp"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">defun</span> hexo-my-blog <span class="list">()</span></span><br><span class="line">    <span class="list">(<span class="keyword">interactive</span>)</span></span><br><span class="line">    <span class="comment">;; change to your blog directory</span></span><br><span class="line">    <span class="list">(<span class="keyword">hexo</span> <span class="string">&quot;~/blog/myblog/&quot;</span>)</span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">defun</span> hexo-my-blog <span class="list">()</span></span><br><span class="line">    <span class="list">(<span class="keyword">interactive</span>)</span></span><br><span class="line">    <span class="comment">;; change to your blog directory</span></span><br><span class="line">    <span class="list">(<span class="keyword">hexo</span> <span class="string">&quot;~/blog/myblog/&quot;</span>)</span>)</span></span><br></pre></td></tr></table></figure>
 </div>
 
 
 <p>
 Run:
 </p>
+
 <div class="org-src-container">
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line"><span class="comment"># only need run this once</span></span><br><span class="line">npm install https://github.com/coldnew/hexo-renderer-org<span class="comment">#master --save</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line"><span class="comment"># only need run this once</span></span><br><span class="line">npm install https://github.com/coldnew/hexo-renderer-org<span class="comment">#master --save</span></span><br></pre></td></tr></table></figure>
 </div>
 
 <p>
@@ -176,22 +177,22 @@ hexo server
 </div>
 </div>
 
-<div id="outline-container-org00fb2d7" class="outline-2">
-<h2 id="org00fb2d7">Create a new post</h2>
-<div class="outline-text-2" id="text-org00fb2d7">
+<div id="outline-container-org79f8037" class="outline-2">
+<h2 id="org79f8037">Create a new post</h2>
+<div class="outline-text-2" id="text-org79f8037">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">M-x hexo-new</span><br></pre></td></tr></table></figure>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org6f72164" class="outline-2">
-<h2 id="org6f72164">Deploy</h2>
-<div class="outline-text-2" id="text-org6f72164">
+<div id="outline-container-orgef5769b" class="outline-2">
+<h2 id="orgef5769b">Deploy</h2>
+<div class="outline-text-2" id="text-orgef5769b">
 </div>
-<div id="outline-container-org0a0e591" class="outline-3">
-<h3 id="org0a0e591">Update &quot;&lt;blog_dir&gt;/_config.yml&quot;</h3>
-<div class="outline-text-3" id="text-org0a0e591">
+<div id="outline-container-org10b6b70" class="outline-3">
+<h3 id="org10b6b70">Update &quot;&lt;blog_dir&gt;/_config.yml&quot;</h3>
+<div class="outline-text-3" id="text-org10b6b70">
 <div class="org-src-container">
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"># Site
 title: Fei&apos;s Blog
@@ -221,9 +222,9 @@ deploy:
 </div>
 </div>
 
-<div id="outline-container-orgb74161f" class="outline-3">
-<h3 id="orgb74161f">Deploy to github pages</h3>
-<div class="outline-text-3" id="text-orgb74161f">
+<div id="outline-container-org56a2a73" class="outline-3">
+<h3 id="org56a2a73">Deploy to github pages</h3>
+<div class="outline-text-3" id="text-org56a2a73">
 <div class="org-src-container">
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 </div>
@@ -235,7 +236,7 @@ deploy:
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://philips-ni.github.io/2018/11/24/hexo-org-gitpages/" data-id="cjowhnmi10001z8e8amtcukb4" class="article-share-link">Share</a>
+      <a data-url="https://philips-ni.github.io/2018/11/24/hexo-org-gitpages/" data-id="cjowhr6rt00010ye8pr42bvql" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/org-mode/">org-mode</a></li></ul>
